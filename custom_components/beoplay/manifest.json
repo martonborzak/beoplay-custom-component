@@ -1,0 +1,8 @@
+{
+  "domain": "beoplay",
+  "name": "Beoplay",
+  "documentation": "https://github.com/martonborzak/beoplay-custom-component",
+  "dependencies": [],
+  "codeowners": ["@martonborzak"],
+  "requirements": ["ha-beoplay"]
+}
