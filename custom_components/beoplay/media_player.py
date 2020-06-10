@@ -15,7 +15,7 @@ import voluptuous as vol
 import json
 
 from homeassistant.components.media_player import (
-    MediaPlayerDevice, PLATFORM_SCHEMA)
+    MediaPlayerEntity, PLATFORM_SCHEMA)
 from homeassistant.components.media_player.const import (
     DOMAIN, MEDIA_TYPE_MUSIC, SUPPORT_NEXT_TRACK,
     SUPPORT_PAUSE, SUPPORT_PLAY_MEDIA, SUPPORT_PREVIOUS_TRACK,
@@ -133,7 +133,7 @@ async def async_setup_platform(hass, config, async_add_devices, discovery_info=N
     _add_player(hass, async_add_devices, host, name)
 
 
-class BeoPlay(MediaPlayerDevice):
+class BeoPlay(MediaPlayerEntity):
     """Representation of a BeoPlay speaker"""
 
     def __init__(self, hass, speaker, name):
