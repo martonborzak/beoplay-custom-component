@@ -2,7 +2,6 @@
 Support for Bang & Olufsen speakers
 """
 import asyncio
-from asyncio.futures import CancelledError
 import logging
 from datetime import timedelta
 
@@ -177,7 +176,7 @@ class BeoPlay(MediaPlayerEntity):
                 CHECK_TIMEOUT, loop=self._hass.loop)
             self.start_polling()
 
-        except CancelledError:
+        except asyncio.CancelledError:
             _LOGGER.debug("Stopping the polling of node %s", self._name)
         except Exception:
             _LOGGER.exception("Unexpected error in %s", self._name)
