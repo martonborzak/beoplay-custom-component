@@ -1,6 +1,7 @@
 {
   "domain": "beoplay",
   "name": "BeoPlay",
+  "version": "0.1",
   "documentation": "https://github.com/martonborzak/beoplay-custom-component",
   "dependencies": [],
   "codeowners": [],
